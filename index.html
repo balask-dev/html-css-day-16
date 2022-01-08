@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Event update page</title>
+    <style>
+      body {
+        border: 1px solid black;
+        width: 50%;
+        margin: 20px 20px 50px 50px;
+      
+        margin-top: 20px;
+      }
+
+      .three {
+        display: flex;
+        width: 300px;
+        border: 1px solid black;
+        padding-top: 200px;
+        margin-top: 50px;
+        margin-right: 200px;
+        margin-left: 10px;
+      }
+
+
+      .one {
+        text-align: center;
+        height: 70px;
+        font-family: unset;
+        font-size: 30px;
+        padding-top: 10px;
+        font-family: monospace "Lucida Sans";
+      }
+
+      .two {
+        text-align: center;
+        height: 20px;
+        font-family: monospace "Lucida Sans";
+      }
+      canvas {
+        margin-left: 200px;
+        height: 150px;
+        width: 150px;
+        align-content: center;
+      }
+
+      .three {
+        display: flex;
+        padding-top: 50px;
+        margin-left:30px;
+        margin-bottom: 50px;
+        width: 900px;
+      }
+      form {
+        margin-left: 60px;
+        margin-bottom: 50px;
+      }
+     
+
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="one">EVENT 1</div>
+        <div class="two">Number of available seats: 23</div>
+
+        <div class="three">
+          <div class="col-1">
+            <canvas id="c" style="border: 1px solid black">Image</canvas>
+          </div>
+
+          <form class="col-2">
+            <label style="margin-left:111px;" for="name">Name:</label>
+            <input type="text" id="name" name="" value="" /><br />
+            <label style="margin-left:113px;" for="mail">Email:</label>
+            <input type="text" id="mail" name="" value="" /><br />
+            <label style="margin-left:80px;" for="text">Phone No:</label>
+            <input type="text" id="number" name="" value="" /><br />
+            <label style="margin-left:30px;" for="seat">Number of seats</label>
+            <input type="number" id="seat" name="" value="" /><br />
+            <label for="attend">Name of attendee 2:</label>
+            <input type="text" id="attend" name="" value="" /><br />
+            <button>Submit</button>
+            <button>Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      var c = document.getElementById("c");
+      var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(140, 75, 60, 0, 2 * Math.PI);
+      ctx.stroke();
+    </script>
+  </body>
+</html>
